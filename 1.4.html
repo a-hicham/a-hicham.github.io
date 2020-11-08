@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>hait2s WEb Engineering Aufgabe 1.4</title>
+
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            td{
+                vertical-align: text-top;
+                padding: 10px;
+            }
+            td:nth-child(1) {
+                width: 35%;
+                text-align: right;
+            }
+            td:nth-child(2) {
+                text-align: left;
+            }
+            input[placeholder]{
+                height: 25px;
+                width: 250px;
+            }
+            select {
+                width: 120px;
+                height: 25px;
+                background-color: #f0f0f0;
+                border-color: #d6d6d6;
+            }
+            input[type="radio"], input[type="checkbox"]{
+                margin-bottom: 10px;
+            }
+            .req:before{
+                content: "˙ ";
+            }
+        </style>
+    </head>
+    <body>
+        <div style="background-color: #b2d6d1;">
+            <h1 style="text-align: center; color: black; padding-top: 20px;">
+                Survey Form
+            </h1>
+            <div style="background-color: #fafafa; color: black; text-align: center; margin: 0px 50px 0px 50px; padding-top: 25px;">
+                Let us know how we can improve freeCodeCamp
+
+                <form action="" style="padding-top: 25px;">
+                    <table style="margin-left: 225px;">
+                        <tr>
+                            <td>
+                                <label for="name" class="req">Name:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="email" class="req">Email:</label>
+                            </td>
+                            <td>
+                                <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="age" class="req">Age:</label>
+                            </td>
+                            <td>
+                                <input type="number" min="16" max="100" step="1" id="age" name="age" placeholder="Age" required>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="role">Which options best describes your current role?</label>
+                            </td>
+                            <td>
+                                <select id="role" name="role">
+                                    <option value="student">Student</option>
+                                    <option value="student">Educator</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="recommend">How likely ist that you would recommend freeCodeCamp to a friend?</label>
+                            </td>
+                            <td>
+                                <div>
+                                    <input type="radio" id="definitiv" name="recommend">
+                                    <label for="definitiv">Definitevly</label>
+                                </div>                                
+                                <div>
+                                    <input type="radio" id="maybe" name="recommend">
+                                    <label for="maybe">Maybe</label>
+                                </div>   
+                                <div>
+                                    <input type="radio" id="notsure" name="recommend">
+                                    <label for="notsure">Not Sure</label>
+                                </div>   
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="fcc">What do you like most in FCC:</label>
+                            </td>
+                            <td>
+                                <select id="fcc" name="fcc">
+                                    <option disabled selected value>Select an option</option>
+                                    <option value="value1">Value 1</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="improve">Things that should be improved in the future
+                                    (Check all that apply):</label>
+                            </td>
+                            <td>
+                                <div>
+                                    <input type="checkbox" id="fep" name="improve">
+                                    <label for="fep">Front-end-Projects</label>
+                                </div>                                
+                                <div>
+                                    <input type="checkbox" id="bep" name="improve">
+                                    <label for="bep">Back-end-Projects</label>
+                                </div>   
+                                <div>
+                                    <input type="checkbox" id="datav" name="improve">
+                                    <label for="datav">Data Visualization</label>
+                                </div>   
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
