@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            div {
+                min-height: 10vw;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template: 'red' 'green' 'blue' 'violet';
+                grid-gap: 0;
+            }
+
+            .red {
+                grid-area: red;
+                background-color: red;
+            }
+
+            
+            .green {
+                grid-area: green;
+                background-color: green;
+            }
+
+            
+            .blue {
+                grid-area: blue;
+                background-color: blue;
+                height: 70vw;
+            }
+
+            .violet {
+                grid-area: violet;
+                background-color: violet;
+            }
+
+            @media screen and (min-width: 500px) {
+                .grid-container {
+                    grid-gap: 3px;
+                    grid-template: 'red red red' 'green blue blue' 'violet violet violet';
+                }
+            }
+
+            @media screen and (min-width: 1000px) {
+                .grid-container {
+                    grid-gap: 5px;
+                    grid-template: 'red red red red' 'green blue blue violet';
+                    
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="red">red</div>
+            <div class="green">green</div>
+            <div class="blue">blue</div>
+            <div class="violet">violet</div>
+        </div>
+
+    </body>
+</html>

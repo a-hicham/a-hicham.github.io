@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Desktop first Flex</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .other {
+                display: flex;
+                height: 250px;
+                margin: 5px;
+                justify-content: space-between;
+            }
+
+            .box {
+                margin: 5px;
+            }
+
+            .red {
+                background-color: red;
+                height: 10vw;
+            }
+
+            .green {
+                background-color: green;
+                flex: 0 0 25%;
+                height: 50vw;
+            }
+
+            .blue {
+                background-color: blue;
+                flex: 0 0 49%;
+                height: 50vw;
+            }
+
+            .violet {
+                background-color: violet;
+                flex: 0 0 25%;
+                height: 50vw;
+            }
+
+            @media (max-width: 1000px) {
+                .other {
+                    flex-wrap: wrap;
+                    margin: 5px;
+                }
+                .green {
+                    flex: 0 0 30%;
+                    height: 1000px;
+                }
+
+                .blue {
+                    flex: 0 0 70%;
+                    height: 1000px;
+                }
+
+                .violet {
+                    flex: 0 0 100%;
+                    margin-top: 5px;
+                    height: 10vw;
+                }
+            }
+
+            @media (max-width: 500px) {
+                .box {
+                    margin: 0;
+                }
+                .other {
+                    flex-wrap: nowrap;
+                    flex-direction: column;
+                    margin: 0;
+                }
+                .green {
+                    flex: 0 0 10vw;
+                    height: 10vw;
+                }
+
+                .blue {
+                    flex: 0 0 100%;
+                }
+
+                .violet {
+                    flex: 0 0 10vw;
+                    margin-top: 0;
+                    height: 10vw;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="red box"></div>
+        <div class="other">
+            <div class="green "></div>
+            <div class="blue "></div>
+            <div class="violet "></div>
+        </div>
+    </body>
+</html>
